@@ -11,6 +11,7 @@
 <div class="dz-details">
   <div class="dz-thumbnail">
     <img data-dz-thumbnail id="image">
+    <input type="file"  multiple data-dz-thumbnail id="as_image" style="display: none;">
     <span class="dz-nopreview">No preview</span>
     <div class="dz-success-mark"></div>
     <div class="dz-error-mark"></div>

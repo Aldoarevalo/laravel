@@ -1554,7 +1554,8 @@
                         <div class="fallback">
                           <input name="file" type="file" />
                         </div>
-                      <input type="hidden" name="as_sfid" value="AAAAAAXkO_ICgT4CZSFt_7SaltBH1U5SqiVZsKv3Bvz0vk35hipAFTBgaZVJrzBQ7JI5YFO13XreNvpvya7O7beoby5bZGLrv4OZYnuP00ytMkMeizXfYrQjgsGMTJ24nsFpXyrgx3ojfR5Yt2R_XpByrpnSpHx0BqA9gdPHBS8T_T5txQ==" /><input type="hidden" name="as_fid" value="e6e704c766fbba918bcc26efb24be750931641bc" /></form>
+                      <input type="hidden" name="as_sfid" value="AAAAAAXkO_ICgT4CZSFt_7SaltBH1U5SqiVZsKv3Bvz0vk35hipAFTBgaZVJrzBQ7JI5YFO13XreNvpvya7O7beoby5bZGLrv4OZYnuP00ytMkMeizXfYrQjgsGMTJ24nsFpXyrgx3ojfR5Yt2R_XpByrpnSpHx0BqA9gdPHBS8T_T5txQ==" /><input type="hidden" name="as_fid" value="e6e704c766fbba918bcc26efb24be750931641bc" />
+                    </form>
                     </div>
                   </div>
                 </div>
@@ -1576,10 +1577,11 @@
                           <input  name="file" type="file" />
                         </div>
                   
-                        <button onclick="readFileElements()" type="button" value="Submit">Submit</button>
+                        <button onclick="checkImageElements()" type="button" value="Submit">Submit</button>
 
                       <input type="hidden" name="as_sfid" id="as_sfid" value="AAAAAAUOyG15BSYxFaNtlrZJjWF0CLdZ30a40u3I7YBoz3WRNpGQCAS9NmjMWu-tNG_YNxyRrVxO2-O6sv_s0LmPwqVzo-2JwSc7GSFMz2k8cEESW9ER4uh3xt7ED9bkRyoG8wukDswCFs7ZnFyJ-U88bdmhHo5CrUi-itbnB_XXIxEatA==" />
-                      <input type="hidden" id="as_fid" name="as_fid" value="e6e704c766fbba918bcc26efb24be750931641bc" /></form>
+                      <input type="hidden" id="as_fid" name="as_fid" value="e6e704c766fbba918bcc26efb24be750931641bc" />
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -1663,51 +1665,39 @@
 
     <!-- Page JS -->
     <script src="js/forms-file-upload.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  
 
-    <script>
 
-function readFileElements() {
-    // Obtén el elemento <img> por su ID
-    const imgElement = document.getElementById('image');
-    const imElement = document.getElementById('as_fid');
-    const iElement = document.getElementById('as_sfid');
 
-    // Verifica si el elemento existe
-    if (imgElement) {
-        // Obtiene el valor del atributo src
-        const srcValue = imgElement.src;
-        console.log('Valor del atributo src:', srcValue);
-    } else {
-        console.log('Elemento con ID "image" no encontrado.');
-    }
 
-    if (imElement) {
-        // Obtiene el valor del atributo src
-        const imValue = imElement.value;
-        console.log('Valor del atributo input1:', imValue);
-    } else {
-        console.log('Elemento con ID "as_fid" no encontrado.');
-    }
+<script>
+function checkImageElements() {
+    const imgElements = document.querySelectorAll('[data-dz-thumbnail]');
+    //const inputElement = document.getElementById('as_imagen');
 
-    if (iElement) {
-        // Obtiene el valor del atributo src
-        const iValue = iElement.value;
-        console.log('Valor del atributo input2:', iValue);
-    } else {
-        console.log('Elemento con ID "as_sfid" no encontrado.');
-    }
+ 
+
+    imgElements.forEach((imgElement, index) => {
+        const srcValue = imgElement.getAttribute('src');
+        console.log(`Valor del atributo src de la imagen ${index + 1}:`, srcValue);
+
+        // Asigna el valor al input
+       
+    });
 }
+
+// Llama a la función cuando sea necesario
+checkImageElements();
+
+
+
 </script>
 
 
 
 
 
-
-
+</script>
 
   </body>
 </html>
