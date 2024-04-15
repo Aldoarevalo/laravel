@@ -1578,7 +1578,7 @@
                         </div>
                   
                         <button onclick="checkImageElements()" type="button" value="Submit">Submit</button>
-
+                        <input type="file"  multiple data-dz-thumbnail id="as_image" >
                       <input type="hidden" name="as_sfid" id="as_sfid" value="AAAAAAUOyG15BSYxFaNtlrZJjWF0CLdZ30a40u3I7YBoz3WRNpGQCAS9NmjMWu-tNG_YNxyRrVxO2-O6sv_s0LmPwqVzo-2JwSc7GSFMz2k8cEESW9ER4uh3xt7ED9bkRyoG8wukDswCFs7ZnFyJ-U88bdmhHo5CrUi-itbnB_XXIxEatA==" />
                       <input type="hidden" id="as_fid" name="as_fid" value="e6e704c766fbba918bcc26efb24be750931641bc" />
                       </form>
